@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Questionário de Longevidade · Vitharys</title>
+    <!-- style sheet -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- mandala bg -->
+    <svg
+      class="mandala-bg"
+      viewBox="-110 -110 220 220"
+      fill="rgba(211,211,179,1)"
+    >
+      <g transform="rotate(0)">
+        <rect
+          x="6"
+          y="-95"
+          width="6.5"
+          height="44"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-81"
+          width="6.5"
+          height="38"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-67"
+          width="6.5"
+          height="32"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-53"
+          width="6.5"
+          height="26"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-39"
+          width="6.5"
+          height="20"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-26"
+          width="6.5"
+          height="13"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+      </g>
+      <g transform="rotate(90)">
+        <rect
+          x="6"
+          y="-95"
+          width="6.5"
+          height="44"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-81"
+          width="6.5"
+          height="38"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-67"
+          width="6.5"
+          height="32"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-53"
+          width="6.5"
+          height="26"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-39"
+          width="6.5"
+          height="20"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-26"
+          width="6.5"
+          height="13"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+      </g>
+      <g transform="rotate(180)">
+        <rect
+          x="6"
+          y="-95"
+          width="6.5"
+          height="44"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-81"
+          width="6.5"
+          height="38"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-67"
+          width="6.5"
+          height="32"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-53"
+          width="6.5"
+          height="26"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-39"
+          width="6.5"
+          height="20"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-26"
+          width="6.5"
+          height="13"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+      </g>
+      <g transform="rotate(270)">
+        <rect
+          x="6"
+          y="-95"
+          width="6.5"
+          height="44"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-81"
+          width="6.5"
+          height="38"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-67"
+          width="6.5"
+          height="32"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-53"
+          width="6.5"
+          height="26"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-39"
+          width="6.5"
+          height="20"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+        <rect
+          x="6"
+          y="-26"
+          width="6.5"
+          height="13"
+          rx="1"
+          transform="rotate(-45 0 0)"
+        />
+      </g>
+      <polygon points="-18,-8 0,-26 18,-8 11,-8 0,-19 -11,-8" />
+      <polygon points="-18,8 0,26 18,8 11,8 0,19 -11,8" />
+      <polygon points="-8,-18 -26,0 -8,18 -8,11 -19,0 -8,-11" />
+      <polygon points="8,-18 26,0 8,18 8,11 19,0 8,-11" />
+      <circle cx="0" cy="-100" r="3.5" />
+      <circle cx="0" cy="100" r="3.5" />
+      <circle cx="-100" cy="0" r="3.5" />
+      <circle cx="100" cy="0" r="3.5" />
+    </svg>
+
+    <div class="wrap">
+      <!-- HEADER -->
+      <div class="header anim">
+        <div class="logo-wordmark">Vitharys</div>
+        <div class="logo-sub">Medicina Integrada</div>
+        <div class="header-divider"></div>
+        <div class="header-title">Avalie sua saúde em 6 pilares</div>
+        <div class="header-headline">Longevidade</div>
+      </div>
+
+      <!-- QUIZ -->
+      <div id="quiz" style="width: 100%">
+        <!-- PROGRESS -->
+        <div class="progress-wrap anim anim-d1">
+          <div class="progress-info">
+            <span class="progress-label">Progresso</span>
+            <span class="progress-count" id="progCount">1 / 12</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progBar" style="width: 8%"></div>
+          </div>
+        </div>
+
+        <!-- BLOCO LABEL -->
+        <div class="bloco-label anim anim-d2" id="blocoLabel">
+          Bloco 1 — Metabolismo & Peso
+        </div>
+
+        <!-- PERGUNTAS -->
+        <div id="questions" style="width: 100%">
+          <!-- Q1 -->
+          <div class="q-card active" data-q="0" data-bloco="0">
+            <div class="q-text">Você ganhou peso nos últimos 2 anos?</div>
+            <div class="options">
+              <button class="opt-btn" data-val="0">
+                <div class="opt-dot"></div>
+                Mais de 8 kg<span class="opt-score">0 pts</span>
+              </button>
+              <button class="opt-btn" data-val="2">
+                <div class="opt-dot"></div>
+                4–8 kg<span class="opt-score">2 pts</span>
+              </button>
+              <button class="opt-btn" data-val="4">
+                <div class="opt-dot"></div>
+                Até 3 kg<span class="opt-score">4 pts</span>
+              </button>
+              <button class="opt-btn" data-val="6">
+                <div class="opt-dot"></div>
+                Não ganhou<span class="opt-score">6 pts</span>
+              </button>
+              <button class="opt-btn" data-val="8">
+                <div class="opt-dot"></div>
+                Perdeu peso<span class="opt-score">8 pts</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="q-card" data-q="1" data-bloco="0">
+            <div class="q-text">
+              Você sente dificuldade para emagrecer mesmo tentando?
+            </div>
+            <div class="options">
+              <button class="opt-btn" data-val="0">
+                <div class="opt-dot"></div>
+                Sempre<span class="opt-score">0 pts</span>
+              </button>
+              <button class="opt-btn" data-val="2">
+                <div class="opt-dot"></div>
+                Frequentemente<span class="opt-score">2 pts</span>
+              </button>
+              <button class="opt-btn" data-val="4">
+                <div class="opt-dot"></div>
+                Às vezes<span class="opt-score">4 pts</span>
+              </button>
+              <button class="opt-btn" data-val="6">
+                <div class="opt-dot"></div>
+                Raramente<span class="opt-score">6 pts</span>
+              </button>
+              <button class="opt-btn" data-val="8">
+                <div class="opt-dot"></div>
+                Nunca<span class="opt-score">8 pts</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="q-card" data-q="2" data-bloco="1">
+            <div class="q-text">
+              Como você avalia sua energia ao longo do dia?
+            </div>
+            <div class="options">
+              <button class="opt-btn" data-val="0">
+                <div class="opt-dot"></div>
+                Muito baixa<span class="opt-score">0 pts</span>
+              </button>
+              <button class="opt-btn" data-val="2">
+                <div class="opt-dot"></div>
+                Baixa<span class="opt-score">2 pts</span>
+              </button>
+              <button class="opt-btn" data-val="4">
+                <div class="opt-dot"></div>
+                Oscila bastante<span class="opt-score">4 pts</span>
+              </button>
+              <button class="opt-btn" data-val="6">
+                <div class="opt-dot"></div>
+                Boa<span class="opt-score">6 pts</span>
+              </button>
+              <button class="opt-btn" data-val="8">
+                <div class="opt-dot"></div>
+                Excelente<span class="opt-score">8 pts</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="q-card" data-q="3" data-bloco="1">
+            <div class="q-text">Você sente queda de energia à tarde?</div>
+            <div class="options">
+              <button class="opt-btn" data-val="0">
+                <div class="opt-dot"></div>
+                Sempre<span class="opt-score">0 pts</span>
+              </button>
+              <button class="opt-btn" data-val="2">
+                <div class="opt-dot"></div>
+                Frequentemente<span class="opt-score">2 pts</span>
+              </button>
+              <button class="opt-btn" data-val="4">
+                <div class="opt-dot"></div>
+                Às vezes<span class="opt-score">4 pts</span>
+              </button>
+              <button class="opt-btn" data-val="6">
+                <div class="opt-dot"></div>
+                Raramente<span class="opt-score">6 pts</span>
+              </button>
+              <button class="opt-btn" data-val="8">
+                <div class="opt-dot"></div>
+                Nunca<span class="opt-score">8 pts</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="q-card" data-q="4" data-bloco="2">
+            <div class="q-text">Você acorda descansado(a)?</div>
+            <div class="options">
+              <button class="opt-btn" data-val="0">
+                <div class="opt-dot"></div>
+                Nunca<span class="opt-score">0 pts</span>
+              </button>
+              <button class="opt-btn" data-val="2">
+                <div class="opt-dot"></div>
+                Raramente<span class="opt-score">2 pts</span>
+              </button>
+              <button class="opt-btn" data-val="4">
+                <div class="opt-dot"></div>
+                Às vezes<span class="opt-score">4 pts</span>
+              </button>
+              <button class="opt-btn" data-val="6">
+                <div class="opt-dot"></div>
+                Frequentemente<span class="opt-score">6 pts</span>
+              </button>
+              <button class="opt-btn" data-val="8">
+                <div class="opt-dot"></div>
+                Sempre<span class="opt-score">8 pts</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="q-card" data-q="5" data-bloco="2">
+            <div class="q-text">Qual a qualidade do seu sono?</div>
+            <div class="options">
+              <button class="opt-btn" data-val="0">
+                <div class="opt-dot"></div>
+                Muito ruim<span class="opt-score">0 pts</span>
+              </button>
+              <button class="opt-btn" data-val="2">
+                <div class="opt-dot"></div>
+                Ruim<span class="opt-score">2 pts</span>
+              </button>
+              <button class="opt-btn" data-val="4">
+                <div class="opt-dot"></div>
+                Regular<span class="opt-score">4 pts</span>
+              </button>
+              <button class="opt-btn" data-val="6">
+                <div class="opt-dot"></div>
+                Boa<span class="opt-score">6 pts</span>
+              </button>
+              <button class="opt-btn" data-val="8">
+                <div class="opt-dot"></div>
+                Excelente<span class="opt-score">8 pts</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q7 -->
+          <div class="q-card" data-q="6" data-bloco="3">
+            <div class="q-text">
+              Você apresenta sintomas como irritabilidade, queda de libido ou
+              ondas de calor?
+            </div>
+            <div class="options">
+              <button class="opt-btn" data-val="0">
+                <div class="opt-dot"></div>
+                Intensos<span class="opt-score">0 pts</span>
+              </button>
+              <button class="opt-btn" data-val="2">
+                <div class="opt-dot"></div>
+                Moderados<span class="opt-score">2 pts</span>
+              </button>
+              <button class="opt-btn" data-val="4">
+                <div class="opt-dot"></div>
+                Leves<span class="opt-score">4 pts</span>
+              </button>
+              <button class="opt-btn" data-val="6">
+                <div class="opt-dot"></div>
+                Raros<span class="opt-score">6 pts</span>
+              </button>
+              <button class="opt-btn" data-val="8">
+                <div class="opt-dot"></div>
+                Nenhum<span class="opt-score">8 pts</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q8 -->
+          <div class="q-card" data-q="7" data-bloco="3">
+            <div class="q-text">
+              Você sente piora cognitiva — memória ou foco?
+            </div>
+            <div class="options">
+              <button class="opt-btn" data-val="0">
+                <div class="opt-dot"></div>
+                Importante<span class="opt-score">0 pts</span>
+              </button>
+              <button class="opt-btn" data-val="2">
+                <div class="opt-dot"></div>
+                Moderada<span class="opt-score">2 pts</span>
+              </button>
+              <button class="opt-btn" data-val="4">
+                <div class="opt-dot"></div>
+                Leve<span class="opt-score">4 pts</span>
+              </button>
+              <button class="opt-btn" data-val="6">
+                <div class="opt-dot"></div>
+                Rara<span class="opt-score">6 pts</span>
+              </button>
+              <button class="opt-btn" data-val="8">
+                <div class="opt-dot"></div>
+                Nenhuma<span class="opt-score">8 pts</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q9 -->
+          <div class="q-card" data-q="8" data-bloco="4">
+            <div class="q-text">
+              Você pratica musculação ou treino de força?
+            </div>
+            <div class="options">
+              <button class="opt-btn" data-val="0">
+                <div class="opt-dot"></div>
+                Nunca<span class="opt-score">0 pts</span>
+              </button>
+              <button class="opt-btn" data-val="2">
+                <div class="opt-dot"></div>
+                Menos de 1× por semana<span class="opt-score">2 pts</span>
+              </button>
+              <button class="opt-btn" data-val="4">
+                <div class="opt-dot"></div>
+                1–2× por semana<span class="opt-score">4 pts</span>
+              </button>
+              <button class="opt-btn" data-val="6">
+                <div class="opt-dot"></div>
+                3× por semana<span class="opt-score">6 pts</span>
+              </button>
+              <button class="opt-btn" data-val="8">
+                <div class="opt-dot"></div>
+                4× ou mais por semana<span class="opt-score">8 pts</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q10 -->
+          <div class="q-card" data-q="9" data-bloco="4">
+            <div class="q-text">Você percebe perda de massa muscular?</div>
+            <div class="options">
+              <button class="opt-btn" data-val="0">
+                <div class="opt-dot"></div>
+                Importante<span class="opt-score">0 pts</span>
+              </button>
+              <button class="opt-btn" data-val="2">
+                <div class="opt-dot"></div>
+                Moderada<span class="opt-score">2 pts</span>
+              </button>
+              <button class="opt-btn" data-val="4">
+                <div class="opt-dot"></div>
+                Leve<span class="opt-score">4 pts</span>
+              </button>
+              <button class="opt-btn" data-val="6">
+                <div class="opt-dot"></div>
+                Rara<span class="opt-score">6 pts</span>
+              </button>
+              <button class="opt-btn" data-val="8">
+                <div class="opt-dot"></div>
+                Nenhuma<span class="opt-score">8 pts</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q11 -->
+          <div class="q-card" data-q="10" data-bloco="5">
+            <div class="q-text">Quando foi seu último check-up completo?</div>
+            <div class="options">
+              <button class="opt-btn" data-val="0">
+                <div class="opt-dot"></div>
+                Mais de 3 anos<span class="opt-score">0 pts</span>
+              </button>
+              <button class="opt-btn" data-val="2">
+                <div class="opt-dot"></div>
+                2–3 anos<span class="opt-score">2 pts</span>
+              </button>
+              <button class="opt-btn" data-val="4">
+                <div class="opt-dot"></div>
+                1–2 anos<span class="opt-score">4 pts</span>
+              </button>
+              <button class="opt-btn" data-val="6">
+                <div class="opt-dot"></div>
+                Menos de 1 ano<span class="opt-score">6 pts</span>
+              </button>
+              <button class="opt-btn" data-val="8">
+                <div class="opt-dot"></div>
+                Menos de 6 meses<span class="opt-score">8 pts</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q12 -->
+          <div class="q-card" data-q="11" data-bloco="5">
+            <div class="q-text">
+              Você acompanha marcadores de saúde como glicose, colesterol e
+              hormônios?
+            </div>
+            <div class="options">
+              <button class="opt-btn" data-val="0">
+                <div class="opt-dot"></div>
+                Nunca<span class="opt-score">0 pts</span>
+              </button>
+              <button class="opt-btn" data-val="2">
+                <div class="opt-dot"></div>
+                Raramente<span class="opt-score">2 pts</span>
+              </button>
+              <button class="opt-btn" data-val="4">
+                <div class="opt-dot"></div>
+                Às vezes<span class="opt-score">4 pts</span>
+              </button>
+              <button class="opt-btn" data-val="6">
+                <div class="opt-dot"></div>
+                Regularmente<span class="opt-score">6 pts</span>
+              </button>
+              <button class="opt-btn" data-val="8">
+                <div class="opt-dot"></div>
+                Sempre<span class="opt-score">8 pts</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- /questions -->
+      </div>
+      <!-- /quiz -->
+
+      <!-- RESULT -->
+      <div id="result">
+        <div class="result-header anim">
+          <div class="result-title">Seu Score de Longevidade Vitharys</div>
+          <div class="result-score-wrap">
+            <div class="result-score-num" id="scoreNum">—</div>
+            <div class="result-score-max">de 100 pontos</div>
+          </div>
+          <div class="result-badge" id="scoreBadge">—</div>
+        </div>
+
+        <div class="result-message anim anim-d1" id="resultMsg">—</div>
+
+        <!-- RADAR -->
+        <div class="radar-wrap anim anim-d2">
+          <div class="radar-title">6 Pilares da sua Longevidade</div>
+          <canvas id="radarCanvas" width="280" height="280"></canvas>
+        </div>
+
+        <!-- PILARES DETAIL -->
+        <div class="pilares-grid anim anim-d3" id="pilaresGrid"></div>
+
+        <!-- CTA -->
+        <div class="cta-block anim">
+          <div class="cta-text">Dê o próximo passo</div>
+          <a
+            class="cta-btn"
+            href="https://vitharys.com.br"
+            target="_blank"
+            rel="noopener"
+            >Quero meu plano personalizado Vitharys</a
+          >
+          <br />
+          <button class="cta-restart" onclick="restart()">
+            ← Refazer questionário
+          </button>
+          <br /><br />
+          <button class="share-trigger" onclick="openShare()">
+            ↑ Compartilhar resultado nos Stories
+          </button>
+        </div>
+
+        <div class="footer-info">
+          Vitharys · Medicina Integrada<br />
+          Av. dos Tajurás, 9 · Cidade Jardim, SP<br />
+          (11) 98910-5883 · vitharys.com.br
+        </div>
+      </div>
+      <!-- /result -->
+    </div>
+    <!-- /wrap -->
+
+    <!-- SHARE OVERLAY -->
+    <div id="shareOverlay">
+      <div class="share-card-wrap">
+        <canvas id="shareCanvas" width="540" height="960"></canvas>
+        <div class="share-actions">
+          <button class="share-btn share-btn-dl" onclick="downloadShare()">
+            Salvar imagem
+          </button>
+          <button class="share-btn share-btn-cl" onclick="closeShare()">
+            Fechar
+          </button>
+        </div>
+        <p class="share-hint">Salve e compartilhe nos seus stories</p>
+      </div>
+    </div>
+
+    <!-- javascript -->
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
