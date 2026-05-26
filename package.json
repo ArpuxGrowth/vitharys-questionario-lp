@@ -1,0 +1,24 @@
+{
+  "name": "vitharys-questionario-lp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArpuxGrowth/vitharys-questionario-lp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ArpuxGrowth/vitharys-questionario-lp/issues"
+  },
+  "homepage": "https://github.com/ArpuxGrowth/vitharys-questionario-lp#readme",
+  "dependencies": {
+    "resend": "^6.12.4"
+  }
+}

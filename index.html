@@ -602,6 +602,45 @@
           </div>
         </div>
         <!-- /questions -->
+
+        <!-- CAPTURA DE LEAD -->
+        <div id="captureStep" style="display: none; width: 100%">
+          <div class="capture-card">
+            <div class="q-text">
+              Estamos quase lá! Preencha seus dados para ver seu resultado
+              completo.
+            </div>
+            <div class="capture-fields">
+              <div class="capture-field">
+                <label class="capture-label" for="inputName">Nome</label>
+                <input
+                  class="capture-input"
+                  type="text"
+                  id="inputName"
+                  placeholder="Seu nome completo"
+                  autocomplete="name"
+                  maxlength="70"
+                />
+              </div>
+              <div class="capture-field">
+                <label class="capture-label" for="inputPhone">Celular</label>
+                <input
+                  class="capture-input"
+                  type="tel"
+                  id="inputPhone"
+                  placeholder="(11) 99999-9999"
+                  autocomplete="tel"
+                  maxlength="15"
+                />
+              </div>
+            </div>
+            <div id="captureError" class="capture-error"></div>
+            <button class="capture-submit" id="captureSubmit">
+              Ver meu resultado completo →
+            </button>
+          </div>
+        </div>
+        <!-- /captureStep -->
       </div>
       <!-- /quiz -->
 

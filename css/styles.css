@@ -599,6 +599,90 @@ body::after {
   color: rgba(211, 211, 179, 0.7);
 }
 
+/* ── CAPTURE CARD ── */
+#captureStep .capture-card {
+  width: 100%;
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.5s var(--ease),
+    transform 0.5s var(--ease);
+}
+#captureStep .capture-card.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.capture-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+.capture-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.capture-label {
+  font-size: 9px;
+  font-weight: 200;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(211, 211, 179, 0.38);
+}
+.capture-input {
+  width: 100%;
+  background: rgba(211, 211, 179, 0.055);
+  border: 1px solid rgba(211, 211, 179, 0.1);
+  color: rgba(240, 234, 222, 0.9);
+  padding: 15px 20px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  border-radius: 2px;
+  outline: none;
+  transition:
+    border-color 0.2s var(--ease),
+    background 0.2s var(--ease);
+  -webkit-appearance: none;
+}
+.capture-input::placeholder {
+  color: rgba(211, 211, 179, 0.2);
+  font-weight: 200;
+}
+.capture-input:focus {
+  border-color: rgba(211, 211, 179, 0.35);
+  background: rgba(211, 211, 179, 0.08);
+}
+.capture-error {
+  font-size: 10px;
+  font-weight: 300;
+  color: rgba(220, 150, 130, 0.75);
+  letter-spacing: 0.1em;
+  min-height: 20px;
+  padding: 8px 0 4px;
+}
+.capture-submit {
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  background: var(--cl);
+  color: var(--ink);
+  border: none;
+  padding: 16px 36px;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+  margin-top: 16px;
+}
+.capture-submit:hover {
+  background: var(--ow);
+  transform: translateY(-2px);
+}
+
 /* animação entrada */
 @keyframes fadeUp {
   from {

@@ -51,10 +51,59 @@ function nextQ() {
       transitioning = false;
     }, 340);
   } else {
+    cards[current].classList.add("exit");
     setTimeout(() => {
-      showResult();
+      showCapture();
       transitioning = false;
-    }, 200);
+    }, 340);
+  }
+}
+
+function showCapture() {
+  cards.forEach((c) => {
+    c.classList.remove("active", "exit");
+    c.style.display = "none";
+  });
+
+  document.getElementById("progBar").style.width = "100%";
+  document.getElementById("progCount").textContent = "12 / 12";
+  document.getElementById("blocoLabel").textContent = "Identificação";
+
+  const captureStep = document.getElementById("captureStep");
+  captureStep.style.display = "block";
+  requestAnimationFrame(() => {
+    captureStep.querySelector(".capture-card").classList.add("active");
+  });
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  setTimeout(() => document.getElementById("inputName").focus(), 500);
+}
+
+function collectAnswers() {
+  const result = {};
+  cards.forEach((card) => {
+    const qText = card.querySelector(".q-text").textContent.trim();
+    const selected = card.querySelector(".opt-btn.selected");
+    if (selected) {
+      const clone = selected.cloneNode(true);
+      clone.querySelectorAll(".opt-score, .opt-dot").forEach((el) => el.remove());
+      result[qText] = clone.textContent.trim();
+    }
+  });
+  return result;
+}
+
+async function sendLead(name, phone) {
+  const total = answers.reduce((a, b) => (a || 0) + (b || 0), 0);
+  const pct = Math.round((total / MAX_SCORE) * 100);
+  try {
+    await fetch("/api/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, phone, score: pct, answers: collectAnswers() }),
+    });
+  } catch (_) {
+    // fail silently — não bloqueia o resultado
   }
 }
 
@@ -249,9 +298,62 @@ function drawRadar(scores) {
   }
 }
 
+document.getElementById("captureSubmit").addEventListener("click", () => {
+  const name = document.getElementById("inputName").value.trim();
+  const phone = document.getElementById("inputPhone").value.trim();
+  const errEl = document.getElementById("captureError");
+
+  const phoneDigits = phone.replace(/\D/g, "");
+  if (!name || phoneDigits.length < 10) {
+    errEl.textContent = "Preencha nome e celular para continuar.";
+    return;
+  }
+
+  errEl.textContent = "";
+  sendLead(name, phone); // fire-and-forget
+  document.getElementById("captureStep").style.display = "none";
+  showResult();
+});
+
+["inputName", "inputPhone"].forEach((id) => {
+  document.getElementById(id).addEventListener("keydown", (e) => {
+    if (e.key === "Enter") document.getElementById("captureSubmit").click();
+  });
+});
+
+// Name: only letters (including accented), spaces, hyphens and apostrophes
+document.getElementById("inputName").addEventListener("input", function () {
+  const filtered = this.value.replace(/[^a-zA-ZÀ-ÿ\s\-']/g, "");
+  if (this.value !== filtered) this.value = filtered;
+});
+
+// Phone: mask (99) 99999-9999
+document.getElementById("inputPhone").addEventListener("input", function () {
+  const digits = this.value.replace(/\D/g, "").slice(0, 11);
+  let masked = "";
+  if (digits.length === 0) {
+    masked = "";
+  } else if (digits.length <= 2) {
+    masked = "(" + digits;
+  } else if (digits.length <= 7) {
+    masked = "(" + digits.slice(0, 2) + ") " + digits.slice(2);
+  } else {
+    masked = "(" + digits.slice(0, 2) + ") " + digits.slice(2, 7) + "-" + digits.slice(7);
+  }
+  this.value = masked;
+});
+
 function restart() {
   current = 0;
   answers = new Array(TOTAL_Q).fill(null);
+
+  const captureStep = document.getElementById("captureStep");
+  captureStep.style.display = "none";
+  captureStep.querySelector(".capture-card").classList.remove("active");
+  document.getElementById("inputName").value = "";
+  document.getElementById("inputPhone").value = "";
+  document.getElementById("captureError").textContent = "";
+
   document.getElementById("result").classList.remove("show");
   document.getElementById("result").style.display = "none";
   document.getElementById("quiz").style.display = "block";
