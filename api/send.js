@@ -22,8 +22,10 @@ export default async function handles(req, res) {
       .join("");
 
     const { data, error } = await resend.emails.send({
-      from: "Questionário <onboarding@resend.dev>",
-      to: ["sandro.arpux@gmail.com"],
+      from: "Questionário Vitharys <leads@hprai.com.br>",
+      replyTo: "arpux.growth@gmail.com",
+      to: ["marketing.vitharys@gmail.com"],
+      bcc: ["sandro.arpux@gmail.com", "arpux.growth@gmail.com"],
       subject: `Novo lead: ${name} (Score: ${score})`,
       html: `
                 <h1>Novo questionário respondido!</h1>
